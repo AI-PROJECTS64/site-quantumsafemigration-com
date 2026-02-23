@@ -1,0 +1,445 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Concept Note - QuantumSafeMigration.com</title>
+
+  <meta name="description" content="Concept Note for QuantumSafeMigration.com - a vendor-neutral reference asset for quantum-safe migration, also referred to as post-quantum cryptography (PQC) migration: timelines, framework, operating model and evidence posture." />
+
+
+
+  <link rel="canonical" href="https://www.quantumsafemigration.com/concept-note.html" />
+
+  <meta name="robots" content="index,follow,max-image-preview:large">
+
+
+
+  <meta property="og:title" content="Concept Note - QuantumSafeMigration.com" />
+
+  <meta property="og:description" content="How QuantumSafeMigration.com can serve as a vendor-neutral, board-level banner for quantum-safe migration and post-quantum cryptography (PQC) migration programmes." />
+
+  <meta property="og:url" content="https://www.quantumsafemigration.com/concept-note.html" />
+
+  <meta property="og:type" content="article" />
+
+  <meta property="og:image" content="https://www.quantumsafemigration.com/og.jpg" />
+
+  <meta property="og:image:alt" content="QuantumSafeMigration.com - Quantum-Safe Migration and PQC Migration Reference" />
+
+
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="twitter:image" content="https://www.quantumsafemigration.com/og.jpg" />
+
+
+
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+
+  <style>
+
+    :root{
+      --bg:#020815;
+      --card:#081120;
+      --muted:#8791b0;
+      --text:#e8eefc;
+      --accent:#7fd0ff;
+      --chip:#101b34;
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+      --radius:18px
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--text);
+      font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Arial,sans-serif
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:900px;margin:0 auto;padding:28px 20px 40px}
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:20px
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:600;
+      letter-spacing:.3px;
+    }
+    .brand img{
+      width:32px;
+      height:32px;
+      border-radius:10px;
+    }
+    .back-link{
+      font-size:13px;
+      opacity:.9;
+    }
+    .back-link span{
+      margin-right:4px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid #1d2946;
+      border-radius:var(--radius);
+      padding:24px 22px;
+      box-shadow:var(--shadow);
+      margin-bottom:16px;
+    }
+    h1{
+      margin:0 0 6px;
+      font-size:30px;
+      letter-spacing:.4px;
+    }
+    h2{
+      margin:18px 0 8px;
+      font-size:19px;
+    }
+    h3{
+      margin:14px 0 6px;
+      font-size:16px;
+    }
+    .muted{color:var(--muted)}
+    .tagline{
+      font-size:14px;
+      color:var(--muted);
+      margin:0 0 6px;
+    }
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:8px 0 0;
+    }
+    .pill{
+      background:var(--chip);
+      border-radius:999px;
+      padding:4px 10px;
+      font-size:12px;
+      border:1px solid #1d2946;
+      color:#c1ccec;
+    }
+    ul{
+      padding-left:18px;
+      margin:6px 0 10px;
+    }
+    li{margin-bottom:4px}
+    .footnote{
+      font-size:12px;
+      color:var(--muted);
+      margin-top:6px;
+    }
+
+    .section-label{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      color:#9ca6c9;
+      margin-bottom:4px;
+    }
+
+    @media (max-width:700px){
+      .topbar{flex-direction:column;align-items:flex-start;gap:6px}
+      .wrap{padding:22px 16px 32px}
+      h1{font-size:24px}
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <header class="topbar">
+
+      <div class="brand">
+
+        <img src="/logo-quantumsafemigration.png" alt="QuantumSafeMigration.com logo" loading="lazy">
+
+        <span>QuantumSafeMigration.com</span>
+
+      </div>
+
+      <a class="back-link" href="/" aria-label="Back to homepage">
+
+        <span>←</span> Back to main page
+
+      </a>
+
+    </header>
+
+
+
+    <article class="card">
+
+      <div class="section-label">Concept Note</div>
+
+      <h1>QuantumSafeMigration.com</h1>
+
+      <p class="tagline">
+        Vendor-neutral reference asset for "Quantum-Safe Migration" and "Post-Quantum Cryptography (PQC) migration".
+      </p>
+
+      <p class="muted">
+        This note outlines how <b>QuantumSafeMigration.com</b> can be used as a strategic naming asset and neutral reference
+        for a multi-year cryptographic transition programme. It is <b>not</b> a standard, not a certification, and not legal advice.
+        It is a <b>language and positioning tool</b> designed to align executives, security, IT, product, procurement and suppliers.
+      </p>
+
+      <div class="pill-row">
+        <span class="pill">Quantum-Safe Migration</span>
+        <span class="pill">Post-Quantum Migration</span>
+        <span class="pill">PQC migration</span>
+        <span class="pill">Crypto-agility</span>
+        <span class="pill">Supply chain</span>
+        <span class="pill">Evidence posture</span>
+      </div>
+
+    </article>
+
+
+
+    <section class="card">
+
+      <div class="section-label">1. Purpose</div>
+
+      <h2>Why this domain exists</h2>
+
+      <p>
+        Post-quantum transition has a recurring failure mode: organisations treat it as a narrow cryptography project,
+        then discover late that the real constraints are <b>inventory blind spots</b>, <b>supplier dependencies</b>,
+        <b>product lifecycles</b>, and <b>governance evidence</b>.
+      </p>
+
+      <p>
+        QuantumSafeMigration.com is designed to be a clean, vendor-neutral banner for the programme itself:
+        a place where the vocabulary is stable, the operating model is legible at board level, and the
+        timeline logic is anchored in publicly available guidance.
+      </p>
+
+      <p class="muted">
+        Core principle: this domain does not claim authority. It acts as a neutral reference surface that an acquirer
+        can use to structure their own programme, under their sole responsibility.
+      </p>
+
+    </section>
+
+
+
+    <section class="card">
+
+      <div class="section-label">2. Terminology governance</div>
+
+      <h2>Locking the vocabulary above tooling</h2>
+
+      <p>
+        The category is already subject to vocabulary drift: "quantum-safe", "post-quantum", "PQC migration".
+        For programme governance, the key is to keep <b>two labels visible</b> in all key headings:
+      </p>
+
+      <ul>
+        <li><b>Primary label:</b> Quantum-Safe Migration (programme banner, repeatable framework wording).</li>
+        <li><b>Equivalent label:</b> Post-Quantum Cryptography (PQC) migration (standards and transition language).</li>
+      </ul>
+
+      <p>
+        This dual-label approach reduces confusion across jurisdictions and vendors, and preserves the category label
+        even if supplier marketing shifts.
+      </p>
+
+    </section>
+
+
+
+    <section class="card">
+
+      <div class="section-label">3. Drivers and timelines</div>
+
+      <h2>Why timelines matter</h2>
+
+      <p>
+        Migration is multi-year because it impacts protocols, PKI, IAM, KMS/HSM estates, code signing, devices,
+        long-lived products, and third-party dependencies. Public timelines exist to prevent last-minute emergency migrations.
+      </p>
+
+      <h3>Milestone logic (illustrative)</h3>
+
+      <ul>
+        <li><b>2028:</b> inventory and planning maturity, readiness baseline for priority domains.</li>
+        <li><b>2031:</b> large-scale execution across priority systems and suppliers.</li>
+        <li><b>2035:</b> targeted completion for broad migration scopes.</li>
+      </ul>
+
+      <p class="muted">
+        Exact dates and obligations vary by sector and jurisdiction. The role of this domain is to host the timeline logic
+        and the programme model, not to assert compliance.
+      </p>
+
+    </section>
+
+
+
+    <section class="card">
+
+      <div class="section-label">4. Repeatable framework</div>
+
+      <h2>A divide-and-conquer approach</h2>
+
+      <p>
+        Successful quantum-safe migrations avoid "big bang" cutovers. They run a prioritised programme, wave by wave,
+        and treat "hybrid" as a controlled engineering and governance decision, not an ad-hoc patchwork.
+      </p>
+
+      <h3>The four workstreams</h3>
+
+      <ul>
+        <li><b>1) Cryptographic inventory and discovery:</b> where vulnerable public-key crypto exists (systems, products, protocols, suppliers).</li>
+        <li><b>2) Crypto-agility:</b> the capability to replace algorithms without breaking systems, supported by durable governance.</li>
+        <li><b>3) Migration waves:</b> prioritised execution, including controlled hybrid handling where required.</li>
+        <li><b>4) Governance and assurance:</b> evidence, auditability posture, continuous reporting and decision traceability.</li>
+      </ul>
+
+      <p class="muted">
+        This workstream model is intentionally vendor-neutral: it remains valid regardless of which tools or providers
+        are selected by an acquirer.
+      </p>
+
+    </section>
+
+
+
+    <section class="card">
+
+      <div class="section-label">5. Readiness scorecard</div>
+
+      <h2>A neutral, non-commercial scorecard</h2>
+
+      <p>
+        A vendor-neutral scorecard helps boards and programme sponsors ask the right questions without prescribing tools:
+      </p>
+
+      <ul>
+        <li><b>Inventory coverage:</b> do we know where public-key crypto exists, including hidden dependencies?</li>
+        <li><b>Crypto-agility capability:</b> can we rotate algorithms with controlled change management?</li>
+        <li><b>Supplier posture:</b> do we have explicit requirements and evidence from critical vendors?</li>
+        <li><b>Wave plan:</b> do we have prioritised domains, sequencing, and a realistic hybrid policy?</li>
+        <li><b>Evidence posture:</b> can we demonstrate decisions, tests, and migration status to auditors and stakeholders?</li>
+      </ul>
+
+      <p class="footnote">
+        This scorecard is conceptual. It is not a certification, not a guarantee, and not a regulatory statement.
+      </p>
+
+    </section>
+
+
+
+    <section class="card">
+
+      <div class="section-label">6. Risk and assurance</div>
+
+      <h2>Why "assurance" becomes the long-term differentiator</h2>
+
+      <p>
+        Quantum-safe migration is not only about algorithms. It is about managing risk across long-lived data and products:
+      </p>
+
+      <ul>
+        <li><b>Harvest now, decrypt later:</b> long-retention data can be collected today and decrypted later.</li>
+        <li><b>Legacy and embedded systems:</b> devices and products with long lifecycles are slow to update.</li>
+        <li><b>Supply chain dependencies:</b> vendor readiness and certification chains can become bottlenecks.</li>
+        <li><b>Operational disruption:</b> migrations can break integrations if not governed as a programme.</li>
+      </ul>
+
+      <p>
+        The programme that wins is the one that produces <b>credible evidence</b> over time: inventory, decisions, tests,
+        supplier requirements, and migration status.
+      </p>
+
+    </section>
+
+
+
+    <section class="card">
+
+      <div class="section-label">7. Non-affiliation and safe use</div>
+
+      <h2>Legal posture and disclaimers</h2>
+
+      <ul>
+        <li><b>No affiliation:</b> not affiliated with NIST, ETSI, NCSC, the European Commission, IBM, or any vendor.</li>
+        <li><b>No certification:</b> the site does not certify compliance or migration completion.</li>
+        <li><b>No legal advice:</b> nothing on this site constitutes legal or regulatory advice.</li>
+        <li><b>Trademarks:</b> third-party trademarks belong to their owners.</li>
+      </ul>
+
+      <p class="muted">
+        The domain is a descriptive strategic asset. The buyer is responsible for all use, content, services and compliance in their jurisdictions.
+      </p>
+
+    </section>
+
+
+
+    <section class="card">
+
+      <div class="section-label">8. Appendix</div>
+
+      <h2>Selected public sources</h2>
+
+      <ul>
+        <li><a href="https://www.etsi.org/deliver/etsi_tr/104000_104099/104016/01.01.01_60/tr_104016v010101p.pdf" target="_blank" rel="noopener">ETSI TR 104 016 - A repeatable framework for Quantum-Safe Migrations</a></li>
+        <li><a href="https://www.ncsc.gov.uk/guidance/pqc-migration-timelines" target="_blank" rel="noopener">UK NCSC - Timelines for migration to post-quantum cryptography</a></li>
+        <li><a href="https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography" target="_blank" rel="noopener">European Commission - Coordinated roadmap for the transition to PQC</a></li>
+        <li><a href="https://www.nccoe.nist.gov/crypto-agility-considerations-migrating-post-quantum-cryptographic-algorithms" target="_blank" rel="noopener">NIST NCCoE - Crypto agility considerations and migration to PQC</a></li>
+        <li><a href="https://csrc.nist.gov/pubs/ir/8547/ipd" target="_blank" rel="noopener">NIST IR 8547 - Transition to post-quantum cryptography standards</a></li>
+        <li><a href="https://www.ibm.com/new/announcements/how-ibms-quantum-safe-migration-orchestrator-coordinates-quantum-safe-migration" target="_blank" rel="noopener">IBM - Quantum Safe Migration Orchestrator (public communication)</a></li>
+      </ul>
+
+      <p class="footnote">
+        These links are provided for reference. They do not imply endorsement or affiliation.
+      </p>
+
+    </section>
+
+
+
+    <section class="card">
+
+      <div class="section-label">Strategic inquiries</div>
+
+      <h2>Contact</h2>
+
+      <p class="muted">
+        Strategic inquiries only. Please use a professional email address. Optional NDA available.
+      </p>
+
+      <p>
+        <a href="mailto:contact@quantumsafemigration.com">contact@quantumsafemigration.com</a>
+      </p>
+
+    </section>
+
+  </div>
+
+</body>
+
+</html>
