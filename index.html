@@ -1,0 +1,783 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>QuantumSafeMigration.com - Quantum-Safe Migration and PQC Migration Reference</title>
+
+  <meta name="description" content="QuantumSafeMigration.com - vendor-neutral reference for quantum-safe migration, also referred to as post-quantum cryptography (PQC) migration: timelines, framework, operating model and authoritative sources." />
+
+
+
+  <!-- Canonical & hreflang -->
+
+  <link rel="canonical" href="https://www.quantumsafemigration.com/" />
+
+  <link rel="alternate" href="https://www.quantumsafemigration.com/" hreflang="fr" />
+
+  <link rel="alternate" href="https://www.quantumsafemigration.com/" hreflang="en" />
+
+  <link rel="alternate" href="https://www.quantumsafemigration.com/" hreflang="x-default" />
+
+  <meta name="robots" content="index,follow,max-image-preview:large">
+
+
+
+  <!-- Open Graph / Twitter -->
+
+  <meta property="og:title" content="QuantumSafeMigration.com - Quantum-Safe Migration and PQC Migration Reference" />
+
+  <meta property="og:description" content="Vendor-neutral reference for quantum-safe migration (also called post-quantum cryptography migration): timelines, repeatable framework and authoritative sources." />
+
+  <meta property="og:url" content="https://www.quantumsafemigration.com/" />
+
+  <meta property="og:type" content="website" />
+
+  <meta property="og:image" content="https://www.quantumsafemigration.com/og.jpg" />
+
+  <meta property="og:image:alt" content="QuantumSafeMigration.com - Quantum-Safe Migration and PQC Migration Reference" />
+
+
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="twitter:image" content="https://www.quantumsafemigration.com/og.jpg" />
+
+
+
+  <!-- Icons & preload -->
+
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preload" as="image" href="/logo-quantumsafemigration.png" imagesizes="260px" />
+
+
+
+  <!-- Structured data -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "QuantumSafeMigration.com",
+    "url": "https://www.quantumsafemigration.com/",
+    "inLanguage": ["fr-FR","en-GB","en-US"],
+    "description": "Strategic naming asset for quantum-safe migration: a vendor-neutral reference aligned with publicly available guidance and standards on post-quantum cryptography (PQC) migration.",
+    "sameAs": ["https://www.linkedin.com/company/quantumsafemigration"],
+    "potentialAction": {
+      "@type": "CommunicateAction",
+      "target": "mailto:contact@quantumsafemigration.com"
+    }
+  }
+  </script>
+
+
+
+  <!-- Styles (identiques aux autres sites) -->
+
+  <style>
+    :root{
+      --bg:#020815;
+      --card:#081120;
+      --muted:#8791b0;
+      --text:#e8eefc;
+      --accent:#7fd0ff;
+      --chip:#101b34;
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+      --radius:18px
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--text);
+      font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Arial,sans-serif
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1040px;margin:0 auto;padding:28px}
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin:8px 0 22px
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:var(--chip);
+      border:1px solid #1d2946;
+      border-radius:999px;
+      padding:6px 12px;
+      color:#c1ccec;
+      font-size:13px
+    }
+    .badge-dot{
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:radial-gradient(circle,#4ade80 0,#16a34a 55%,#052e16 100%);
+      box-shadow:0 0 0 6px rgba(34,197,94,.25);
+    }
+    .lang{
+      gap:10px;
+      display:flex;
+      align-items:center
+    }
+    .lang button{
+      background:var(--chip);
+      color:var(--text);
+      border:1px solid #1d2946;
+      padding:7px 12px;
+      border-radius:999px;
+      cursor:pointer;
+      font-size:13px;
+    }
+    .lang button[aria-pressed="true"]{
+      background:var(--accent);
+      color:#020815;
+      border-color:transparent
+    }
+    .card{
+      background:var(--card);
+      border:1px solid #1d2946;
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:var(--shadow)
+    }
+    .hero h1{
+      margin:0 0 8px;
+      font-size:44px;
+      letter-spacing:.4px
+    }
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:18px 0 6px
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#122143;
+      color:#fff;
+      border:1px solid #21325b;
+      padding:11px 16px;
+      border-radius:999px;
+      cursor:pointer;
+      text-decoration:none;
+      font-size:14px
+    }
+    .btn.primary{
+      background:var(--accent);
+      color:#020815;
+      border-color:transparent
+    }
+
+    /* Bouton Concept Note - identique à BCIaccess */
+    .btn.concept-note{
+      background:transparent;
+      border-radius:999px;
+      border:1px solid rgba(127,208,255,.9);
+      box-shadow:0 0 0 1px rgba(15,23,42,.9);
+      color:var(--accent);
+      padding:10px 18px;
+    }
+    .btn.concept-note:hover{
+      text-decoration:none;
+      box-shadow:0 0 0 1px rgba(148,197,255,1),0 0 18px rgba(56,189,248,.25);
+    }
+    .btn.concept-note .cn-icon{
+      width:14px;
+      height:14px;
+      border-radius:4px;
+      background:linear-gradient(135deg,#7fd0ff,#38bdf8);
+      box-shadow:0 0 0 1px rgba(15,23,42,.8);
+      flex-shrink:0;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:18px
+    }
+    .col-6{grid-column:span 6}
+    .col-12{grid-column:span 12}
+    .chip{
+      display:inline-block;
+      background:var(--chip);
+      border:1px solid #1d2946;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:13px;
+      color:#c1ccec
+    }
+    .list{
+      display:grid;
+      gap:10px;
+      margin:8px 0
+    }
+    .muted{color:var(--muted)}
+    .foot{opacity:.8;font-size:13px;margin-top:24px}
+    img.logo{
+      max-width:260px;
+      height:auto;
+      display:block;
+      margin:10px 0 10px;
+      opacity:.97;
+      border-radius:14px
+    }
+    @media (max-width:860px){
+      .col-6{grid-column:span 12}
+      .hero h1{font-size:34px}
+    }
+    .ico{width:16px;height:16px;display:inline-block;vertical-align:middle}
+  </style>
+
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <div class="topbar">
+
+      <div class="badge">
+
+        <span class="badge-dot"></span>
+
+        <span>Strategic digital asset available for acquisition</span>
+
+      </div>
+
+      <div class="lang">
+
+        <button id="btn-fr" aria-pressed="false">FR</button>
+
+        <button id="btn-en" aria-pressed="true">EN</button>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =============== HERO FR =============== -->
+
+    <section class="card hero" data-fr hidden>
+
+      <h1>Quantum-Safe Migration</h1>
+
+      <img class="logo" src="/logo-quantumsafemigration.png" alt="QuantumSafeMigration.com" loading="eager">
+
+      <p class="muted">
+        <b>Nom de domaine descriptif .com</b> pour <b>« Quantum-Safe Migration »</b>, aussi appelée
+        <b>migration post-quantique</b> ou <b>migration PQC</b> (Post-Quantum Cryptography).
+        <br>
+        La quantum-safe migration désigne la transition pluriannuelle des systèmes utilisant une
+        cryptographie à clé publique vulnérable au quantique vers des algorithmes post-quantiques,
+        à l’échelle des <b>systèmes</b>, <b>produits</b> et <b>chaînes d’approvisionnement</b>.
+        <br>
+        Conçu comme une <b>référence neutre</b> et un <b>point d’entrée exécutable</b> pour cadrer
+        un programme, aligner la terminologie (quantum-safe / post-quantum), et structurer les
+        trajectoires (inventaire, crypto-agility, vagues de migration, gouvernance et preuves).
+        <br>
+        <b>Demandes stratégiques uniquement</b> (Big Four, intégrateurs globaux, éditeurs PKI/IAM/KMS/HSM,
+        opérateurs critiques, grands donneurs d’ordres, coalitions et programmes sectoriels).
+      </p>
+
+      <div class="cta">
+
+        <a class="btn primary" href="mailto:contact@quantumsafemigration.com?subject=QuantumSafeMigration.com%20-%20NDA%20%2F%20Proposition&body=Bonjour%2C%0D%0A%0D%0AJe%20souhaite%20obtenir%20votre%20NDA%20et%2Fou%20proposer%20une%20offre%20pour%20QuantumSafeMigration.com.%0D%0AOrganisation%20%3A%20%0D%0ANom%20%2F%20Fonction%20%3A%20%0D%0AInitiative%20envisag%C3%A9e%20%28programme%20groupe%2C%20framework%2C%20hub%2C%20alliance%29%20%3A%20%0D%0AP%C3%A9rim%C3%A8tre%20%28IT%2C%20produits%2C%20supply%20chain%29%20%3A%20%0D%0ABudget%20indicatif%20%3A%20%0D%0A%0D%0ACordialement%2C">
+          Proposer une offre / Demander un NDA
+        </a>
+
+        <a class="btn" href="#framework-fr">Framework</a>
+
+        <a class="btn" href="#milestones-fr">Jalons</a>
+
+        <a class="btn" href="#sources-fr">Sources</a>
+
+        <a class="btn" href="https://www.linkedin.com/company/quantumsafemigration" target="_blank" rel="noopener" aria-label="Ouvrir la page LinkedIn QuantumSafeMigration">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.85 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.13V23h-4v-6.5z"/>
+          </svg>
+          LinkedIn
+        </a>
+
+      </div>
+
+      <p class="muted" style="margin-top:8px">
+        Ce site présente <b>QuantumSafeMigration.com</b> comme <b>actif numérique descriptif</b>.
+        Il ne constitue pas un service, une certification, ni une promesse de conformité.
+        Aucune affiliation avec NIST, ETSI, NCSC, la Commission européenne, IBM ou tout fournisseur.
+      </p>
+
+    </section>
+
+
+
+    <!-- =============== FRAMEWORK FR =============== -->
+
+    <section id="framework-fr" class="card" style="margin-top:16px" data-fr hidden>
+
+      <div class="grid">
+
+        <div class="col-6">
+
+          <h3>Le framework reproductible</h3>
+
+          <p class="muted">
+            Un cadre public de migration existe pour découper le problème et exécuter une trajectoire
+            priorisée. La logique opérationnelle évite les bascules "big bang" et privilégie une approche
+            par vagues, avec gestion maîtrisée des cas hybrides.
+          </p>
+
+          <div class="list">
+            <div class="chip">Inventaire cryptographique et discovery (assets, protocoles, dépendances)</div>
+            <div class="chip">Crypto-agility (remplacer les algorithmes sans casser les systèmes)</div>
+            <div class="chip">Waves de migration (priorisation, exécution, hybride si nécessaire)</div>
+            <div class="chip">Gouvernance et assurance (preuves, auditabilité, posture continue)</div>
+          </div>
+
+        </div>
+
+        <div class="col-6">
+
+          <h3>Pourquoi ce nom a de la valeur</h3>
+
+          <div class="list">
+            <div class="chip">Exact-match .com sur un libellé programme ("Quantum-Safe Migration")</div>
+            <div class="chip">Neutralise la bataille de vocabulaire (quantum-safe / post-quantum / PQC)</div>
+            <div class="chip">Lisible C-suite et Board : migration, jalons, gouvernance, preuves</div>
+            <div class="chip">Compatible RFP, procurement, exigences fournisseurs et supply chain</div>
+            <div class="chip">Actif défensif une fois adopté dans docs, politiques et roadmaps</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <p class="muted">
+        Le site ne vend aucun outil de chiffrement, HSM, PKI, IAM, KMS, ni service de conseil.
+        Il présente un actif sémantique. L’acquéreur reste seul responsable de ses programmes,
+        contenus et obligations légales.
+      </p>
+
+    </section>
+
+
+
+    <!-- =============== MILESTONES FR =============== -->
+
+    <section id="milestones-fr" class="card" style="margin-top:16px" data-fr hidden>
+
+      <h3>Jalons (timelines publiques)</h3>
+
+      <p class="muted">
+        Les jalons ci-dessous reflètent une logique de programme pluriannuel : inventaire et plan,
+        exécution priorisée, puis complétion. Les dates exactes et exigences varient selon secteurs,
+        juridictions et dépendances fournisseurs.
+      </p>
+
+      <div class="grid">
+
+        <div class="col-6">
+          <h3>UK NCSC (repères 2028 / 2031 / 2035)</h3>
+          <div class="list">
+            <div class="chip">2028 - préparation, inventaire, planification</div>
+            <div class="chip">2031 - migration large des systèmes prioritaires</div>
+            <div class="chip">2035 - complétion visée de migration</div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <h3>CNSA 2.0 (repères 2027 / 2030 / 2031)</h3>
+          <div class="list">
+            <div class="chip">2027 - exigences initiales pour profils critiques</div>
+            <div class="chip">2030 - jalon de modernisation et déploiements majeurs</div>
+            <div class="chip">2031 - échéances renforcées selon périmètres</div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =============== SOURCES FR =============== -->
+
+    <section id="sources-fr" class="card" style="margin-top:16px" data-fr hidden>
+
+      <h3>Sources (tier 1)</h3>
+
+      <p class="muted">
+        Sélection de références publiques utilisées pour cadrer la terminologie, les timelines et
+        la logique de migration. Les marques citées appartiennent à leurs propriétaires.
+      </p>
+
+      <div class="list">
+        <a class="chip" href="https://www.etsi.org/deliver/etsi_tr/104000_104099/104016/01.01.01_60/tr_104016v010101p.pdf" target="_blank" rel="noopener">ETSI TR 104 016 - Quantum-Safe Migrations</a>
+        <a class="chip" href="https://www.ncsc.gov.uk/guidance/pqc-migration-timelines" target="_blank" rel="noopener">NCSC - Timelines for migration to PQC</a>
+        <a class="chip" href="https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography" target="_blank" rel="noopener">EU - Coordinated roadmap for PQC transition</a>
+        <a class="chip" href="https://www.nccoe.nist.gov/crypto-agility-considerations-migrating-post-quantum-cryptographic-algorithms" target="_blank" rel="noopener">NIST NCCoE - Migration to PQC</a>
+        <a class="chip" href="https://csrc.nist.gov/pubs/ir/8547/ipd" target="_blank" rel="noopener">NIST IR 8547 - Transition to PQC standards</a>
+        <a class="chip" href="https://www.ibm.com/new/announcements/how-ibms-quantum-safe-migration-orchestrator-coordinates-quantum-safe-migration" target="_blank" rel="noopener">IBM - Quantum Safe Migration Orchestrator (market signal)</a>
+      </div>
+
+      <p class="muted">
+        Note : ce site n’est pas affilié à ces organisations. Il ne délivre aucune certification et
+        ne fournit aucun conseil juridique ou réglementaire.
+      </p>
+
+    </section>
+
+
+
+    <!-- =============== ACQUISITION FR =============== -->
+
+    <section class="card" style="margin-top:16px" data-fr hidden>
+
+      <h3>Acquisition (processus sécurisé)</h3>
+
+      <p class="muted">
+        Processus type : prise de contact professionnelle &rarr; NDA éventuel &rarr;
+        échanges stratégiques (périmètre, gouvernance, articulation programme) &rarr; offre formelle
+        &rarr; transaction via escrow &rarr; transfert du domaine.
+        <br>
+        L’actif cédé est exclusivement le nom de domaine <b>QuantumSafeMigration.com</b>,
+        sans infrastructure, base de données, logiciel, ni service réglementé associé.
+      </p>
+
+      <a class="btn primary" href="mailto:contact@quantumsafemigration.com?subject=QuantumSafeMigration.com%20-%20NDA%20%2F%20Proposition">
+        Contact direct : contact@quantumsafemigration.com
+      </a>
+
+    </section>
+
+
+
+    <!-- =============== DOCS FR =============== -->
+
+    <section class="card" style="margin-top:16px" data-fr hidden>
+
+      <h3>Documents / Briefs</h3>
+
+      <p class="muted">
+        Brief d’acquisition QuantumSafeMigration.com (2025-11) disponible en français
+        (et en anglais via la section EN). Le brief porte uniquement sur l’intérêt stratégique
+        de l’actif et son positionnement neutre.
+      </p>
+
+      <div class="cta">
+
+        <a class="btn" href="/Acquisition%20Brief%20quantumsafemigration-202511.pdf" target="_blank" rel="noopener" type="application/pdf">
+          👁️ Ouvrir le Brief (FR)
+        </a>
+
+        <a class="btn primary" href="/Acquisition%20Brief%20quantumsafemigration-202511.pdf" download="Acquisition-Brief-quantumsafemigration-FR-202511.pdf" type="application/pdf">
+          📥 Télécharger (FR, PDF)
+        </a>
+
+        <a class="btn concept-note" href="/concept-note.html">
+          <span class="cn-icon"></span>
+          Concept Note
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =============== HERO EN =============== -->
+
+    <section class="card hero" data-en>
+
+      <h1>Quantum-Safe Migration</h1>
+
+      <img class="logo" src="/logo-quantumsafemigration.png" alt="QuantumSafeMigration.com" loading="eager">
+
+      <p class="muted">
+        <b>Strategic descriptive .com domain</b> for <b>Quantum-Safe Migration</b>, also referred to as
+        <b>post-quantum migration</b> or <b>PQC (Post-Quantum Cryptography) migration</b>.
+        <br>
+        Quantum-safe migration is a multi-year transition from quantum-vulnerable public-key cryptography
+        to post-quantum cryptography across <b>systems</b>, <b>products</b> and <b>supply chains</b>.
+        <br>
+        Designed as a <b>vendor-neutral reference</b> and an <b>execution-ready entry point</b> to
+        govern terminology (quantum-safe / post-quantum), structure the operating model, and anchor
+        timelines, frameworks and evidence posture.
+        <br>
+        <b>Serious inquiries only</b> (Big Four, global integrators, PKI/IAM/KMS/HSM vendors, critical operators,
+        large enterprises, alliances and sector programmes).
+      </p>
+
+      <div class="cta">
+
+        <a class="btn primary" href="mailto:contact@quantumsafemigration.com?subject=QuantumSafeMigration.com%20-%20NDA%20%2F%20Offer&body=Hello%2C%0D%0A%0D%0AI%27d%20like%20to%20request%20your%20NDA%20and%2For%20submit%20an%20offer%20for%20QuantumSafeMigration.com.%0D%0AOrganisation%3A%20%0D%0AName%20%2F%20Role%3A%20%0D%0APlanned%20initiative%20%28programme%2C%20framework%2C%20hub%2C%20alliance%29%3A%20%0D%0AScope%20%28IT%2C%20products%2C%20supply%20chain%29%3A%20%0D%0ABudget%20range%3A%20%0D%0A%0D%0ABest%2C">
+          Submit an offer / Request NDA
+        </a>
+
+        <a class="btn concept-note" href="/concept-note.html">
+          <span class="cn-icon"></span>
+          Concept Note
+        </a>
+
+        <a class="btn" href="#framework-en">Framework</a>
+
+        <a class="btn" href="#milestones-en">Milestones</a>
+
+        <a class="btn" href="#sources-en">Sources</a>
+
+        <a class="btn" href="https://www.linkedin.com/company/quantumsafemigration" target="_blank" rel="noopener" aria-label="Open QuantumSafeMigration on LinkedIn">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.85 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.13V23h-4v-6.5z"/>
+          </svg>
+          LinkedIn
+        </a>
+
+      </div>
+
+      <p class="muted" style="margin-top:8px">
+        This site presents <b>QuantumSafeMigration.com</b> as a <b>descriptive strategic digital asset</b>.
+        No affiliation with NIST, ETSI, NCSC, the European Commission, IBM or any vendor.
+        No certification, no compliance guarantee, no legal advice.
+      </p>
+
+    </section>
+
+
+
+    <!-- =============== FRAMEWORK EN =============== -->
+
+    <section id="framework-en" class="card" style="margin-top:16px" data-en>
+
+      <div class="grid">
+
+        <div class="col-6">
+
+          <h3>The repeatable framework</h3>
+
+          <p class="muted">
+            A public migration framework exists to divide the problem and execute a prioritised, multi-wave programme.
+            This operating logic avoids "big bang" cutovers and supports controlled hybrid handling where needed.
+          </p>
+
+          <div class="list">
+            <div class="chip">Cryptographic inventory and discovery (assets, protocols, dependencies)</div>
+            <div class="chip">Crypto-agility (swap algorithms without breaking systems)</div>
+            <div class="chip">Migration waves (prioritisation, execution, hybrid where needed)</div>
+            <div class="chip">Governance and assurance (evidence, auditability, continuous posture)</div>
+          </div>
+
+        </div>
+
+        <div class="col-6">
+
+          <h3>Why QuantumSafeMigration.com is valuable</h3>
+
+          <div class="list">
+            <div class="chip">Exact-match .com aligned with a programme label ("Quantum-Safe Migration")</div>
+            <div class="chip">Neutralises vocabulary drift (quantum-safe / post-quantum / PQC)</div>
+            <div class="chip">Board-readable: migration, milestones, governance, evidence</div>
+            <div class="chip">Compatible with RFPs, procurement, supplier requirements and supply chain</div>
+            <div class="chip">Defensive asset once adopted in docs, policies and roadmaps</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <p class="muted">
+        This site does not sell cryptography products, HSMs, PKI, IAM, KMS, or consulting services.
+        It presents a semantic digital asset. The buyer remains solely responsible for programmes,
+        content and legal compliance.
+      </p>
+
+    </section>
+
+
+
+    <!-- =============== MILESTONES EN =============== -->
+
+    <section id="milestones-en" class="card" style="margin-top:16px" data-en>
+
+      <h3>Milestones (public timelines)</h3>
+
+      <p class="muted">
+        The milestone logic below reflects a multi-year programme: inventory and planning, prioritised execution,
+        then completion. Exact dates and requirements vary by sector, jurisdiction and supplier dependencies.
+      </p>
+
+      <div class="grid">
+
+        <div class="col-6">
+          <h3>UK NCSC (2028 / 2031 / 2035)</h3>
+          <div class="list">
+            <div class="chip">2028 - prepare, inventory, plan</div>
+            <div class="chip">2031 - large-scale migration of priority systems</div>
+            <div class="chip">2035 - targeted completion</div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <h3>CNSA 2.0 (2027 / 2030 / 2031)</h3>
+          <div class="list">
+            <div class="chip">2027 - initial requirements for critical profiles</div>
+            <div class="chip">2030 - major modernisation and deployments</div>
+            <div class="chip">2031 - reinforced deadlines by scope</div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =============== SOURCES EN =============== -->
+
+    <section id="sources-en" class="card" style="margin-top:16px" data-en>
+
+      <h3>Sources (tier 1)</h3>
+
+      <p class="muted">
+        Selected public references used to anchor terminology, timelines and migration logic.
+        Trademarks belong to their respective owners.
+      </p>
+
+      <div class="list">
+        <a class="chip" href="https://www.etsi.org/deliver/etsi_tr/104000_104099/104016/01.01.01_60/tr_104016v010101p.pdf" target="_blank" rel="noopener">ETSI TR 104 016 - Quantum-Safe Migrations</a>
+        <a class="chip" href="https://www.ncsc.gov.uk/guidance/pqc-migration-timelines" target="_blank" rel="noopener">NCSC - Timelines for migration to PQC</a>
+        <a class="chip" href="https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography" target="_blank" rel="noopener">EU - Coordinated roadmap for PQC transition</a>
+        <a class="chip" href="https://www.nccoe.nist.gov/crypto-agility-considerations-migrating-post-quantum-cryptographic-algorithms" target="_blank" rel="noopener">NIST NCCoE - Migration to PQC</a>
+        <a class="chip" href="https://csrc.nist.gov/pubs/ir/8547/ipd" target="_blank" rel="noopener">NIST IR 8547 - Transition to PQC standards</a>
+        <a class="chip" href="https://www.ibm.com/new/announcements/how-ibms-quantum-safe-migration-orchestrator-coordinates-quantum-safe-migration" target="_blank" rel="noopener">IBM - Quantum Safe Migration Orchestrator (market signal)</a>
+      </div>
+
+      <p class="muted">
+        Note: this site is not affiliated with these organisations. No certification, no compliance guarantee, no legal advice.
+      </p>
+
+    </section>
+
+
+
+    <!-- =============== ACQUISITION EN =============== -->
+
+    <section class="card" style="margin-top:16px" data-en>
+
+      <h3>Acquisition (secure process)</h3>
+
+      <p class="muted">
+        Indicative flow: professional contact &rarr; optional NDA &rarr; strategic discussion
+        (scope, governance) &rarr; formal offer &rarr; escrow-based transaction &rarr; transfer
+        of the domain to the buyer’s registrar.
+        <br>
+        The only asset transferred is the <b>QuantumSafeMigration.com</b> domain name, with no
+        infrastructure, datasets, software, or regulated services.
+      </p>
+
+      <a class="btn primary" href="mailto:contact@quantumsafemigration.com?subject=QuantumSafeMigration.com%20-%20NDA%20%2F%20Offer">
+        Direct contact: contact@quantumsafemigration.com
+      </a>
+
+    </section>
+
+
+
+    <!-- =============== DOCS EN =============== -->
+
+    <section class="card" style="margin-top:16px" data-en>
+
+      <h3>Documents / Briefs</h3>
+
+      <p class="muted">
+        QuantumSafeMigration.com acquisition brief (2025-11) available in English
+        (and in French via the FR section). The brief covers the strategic rationale of the asset
+        and its vendor-neutral posture.
+      </p>
+
+      <div class="cta">
+
+        <a class="btn" href="/Acquisition%20Brief%20quantumsafemigration-EN-202511.pdf" target="_blank" rel="noopener" type="application/pdf">
+          👁️ Open Brief (EN)
+        </a>
+
+        <a class="btn primary" href="/Acquisition%20Brief%20quantumsafemigration-EN-202511.pdf" download="Acquisition-Brief-quantumsafemigration-EN-202511.pdf" type="application/pdf">
+          📥 Download (EN, PDF)
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <p class="foot muted">
+
+      © QuantumSafeMigration.com - descriptive strategic digital asset "Quantum-Safe Migration" / "Post-Quantum Cryptography (PQC) migration".
+      No affiliation with public authorities, regulators, standards bodies or vendors. Descriptive use only. No legal, financial, investment, security or tax advice. Contact:
+      <a href="mailto:contact@quantumsafemigration.com">contact@quantumsafemigration.com</a>
+
+    </p>
+
+  </div>
+
+
+
+  <script>
+
+    const frBtn = document.getElementById('btn-fr');
+
+    const enBtn = document.getElementById('btn-en');
+
+
+
+    function show(lang){
+
+      document.querySelectorAll('[data-fr]').forEach(n => n.hidden = (lang !== 'fr'));
+
+      document.querySelectorAll('[data-en]').forEach(n => n.hidden = (lang !== 'en'));
+
+
+
+      frBtn.setAttribute('aria-pressed', String(lang === 'fr'));
+
+      enBtn.setAttribute('aria-pressed', String(lang === 'en'));
+
+
+
+      document.documentElement.lang = (lang === 'fr') ? 'fr' : 'en';
+
+    }
+
+
+
+    frBtn.addEventListener('click', () => show('fr'));
+
+    enBtn.addEventListener('click', () => show('en'));
+
+
+
+    // .com : EN par défaut, FR seulement sur clic
+
+    show('en');
+
+  </script>
+
+</body>
+
+</html>
