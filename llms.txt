@@ -1,0 +1,15 @@
+# QuantumSafeMigration.com
+
+> QuantumSafeMigration.com - possible vendor-neutral banner for quantum-safe migration, also referred to as post-quantum cryptography (PQC) migration: timelines, framework, operating model and public sources.
+
+No affiliation with public authorities, regulators, standards bodies or vendors. Descriptive use only. No legal, financial, medical, regulatory or investment advice. No security or tax advice. Descriptive digital asset only: no service, no platform, no certification. Domain name only is transferred. No software, datasets, services or staff included.
+
+## Pages
+
+- [QuantumSafeMigration.com - Quantum-Safe Migration and PQC Migration](https://www.quantumsafemigration.com/)
+- [Concept Note - QuantumSafeMigration.com](https://www.quantumsafemigration.com/concept-note)
+
+## Documents
+
+- [Download (EN, PDF)](https://www.quantumsafemigration.com/Acquisition%20Brief%20quantumsafemigration-EN-202511.pdf)
+- [Télécharger (FR, PDF)](https://www.quantumsafemigration.com/Acquisition%20Brief%20quantumsafemigration-202511.pdf)
